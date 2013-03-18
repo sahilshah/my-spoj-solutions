@@ -13,6 +13,7 @@ long getMaxPrice(int b, int e, long long* arr, int t){
 	long long one,two;
 	mid=b+floor((e-b+1)/2);
 	//chose mid 
+	if(mid==e)
 	one=(arr[mid]*t)+max(getMaxPrice(b,mid-1,arr,t*2),getMaxPrice(mid+1,e,arr,t*2));
 	//chose mid+1
 	mid++;
